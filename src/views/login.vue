@@ -90,7 +90,7 @@ import axios from 'axios';
                 this.success()
                 this.cookieChange(this.ruleForm2.name)
                 this.resetField(data)
-                this.$router.push("/");
+                this.$router.push("/1");
             }
             
           })

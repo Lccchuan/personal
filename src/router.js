@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import login from './views/login.vue'
+import selectionOne from './views/selectionOne.vue'
+import selectionTwo from './views/selectionTwo.vue'
+import selectionThree from './views/selectionThree.vue'
 
 Vue.use(Router)
 
@@ -12,7 +15,20 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      
+      children: [
+          {path: '1',
+          name: 'selectionOne',
+          component: selectionOne},
+          {path: '2',
+          name: 'selectionTwo',
+          component: selectionTwo},
+          {path: '3',
+          name: 'selectionThree',
+          component: selectionThree}
+        ]
+      
     },
     {
       path: '/login',
